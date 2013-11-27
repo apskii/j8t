@@ -8,22 +8,22 @@ public class Tuple5<A,B,C,D,E> {
         R apply(A arg1, B arg2, C arg3, D arg4, E arg5);
     }
 
-    public A val1;
-    public B val2;
-    public C val3;
-    public D val4;
-    public E val5;
+    public A $1;
+    public B $2;
+    public C $3;
+    public D $4;
+    public E $5;
 
-    public Tuple5(A val1, B val2, C val3, D val4, E val5) {
-        this.val1 = val1;
-        this.val2 = val2;
-        this.val3 = val3;
-        this.val4 = val4;
-        this.val5 = val5;
+    public Tuple5(A $1, B $2, C $3, D $4, E $5) {
+        this.$1 = $1;
+        this.$2 = $2;
+        this.$3 = $3;
+        this.$4 = $4;
+        this.$5 = $5;
     }
 
     public <R> R unpack(Fun<A,B,C,D,E,R> f) {
-        return f.apply(val1, val2, val3, val4, val5);
+        return f.apply($1, $2, $3, $4, $5);
     }
 
     public <AX,BX,CX,DX,EX> Tuple5<AX,BX,CX,DX,EX> map(
@@ -34,11 +34,11 @@ public class Tuple5<A,B,C,D,E> {
         Function<E,EX> fE
     ) {
         return new Tuple5<>(
-            fA.apply(val1),
-            fB.apply(val2),
-            fC.apply(val3),
-            fD.apply(val4),
-            fE.apply(val5)
+            fA.apply($1),
+            fB.apply($2),
+            fC.apply($3),
+            fD.apply($4),
+            fE.apply($5)
         );
     }
 }
